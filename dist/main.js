@@ -5,7 +5,7 @@ const tempManager = new TempManager
 async function loadPage() {
    await tempManager.getDataFromDB()
    for(let i=0; i<tempManager.cityData.length; i++){
-   renderer.renderData(`tempManager.cityData[i])
+   renderer.renderData(tempManager.cityData[i])
    }
 }
 loadPage()
