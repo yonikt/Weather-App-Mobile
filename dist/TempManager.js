@@ -23,7 +23,6 @@ class TempManager {
         let data = await this.cityData.find(i => i.name === cityName)
         await $.post('/city', data)
         return data
-        console.log("saved")
     }
 
     removeCity(cityName) {
@@ -31,7 +30,7 @@ class TempManager {
             method: 'DELETE',
             url: `/city/${cityName}`,
             success: function (data) {
-                console.log(data)
+                return data
             }
         })
 
