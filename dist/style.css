@@ -62,15 +62,16 @@ max-height: 100%;
 }
 .info{
 	width: 180px;
-	height: 50px;
+	height: 30px;
 	position: absolute;
 	bottom: 0;
 	right: 0;
 	background: rgb(42, 178, 234);
 	font-weight: 700;
+	text-align: center;
 	color: rgb(255, 255, 255);
   text-align: center;
-  font-size: 25px;
+  font-size: 15px;
 }
 
 .last{
