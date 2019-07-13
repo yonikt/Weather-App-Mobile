@@ -3,12 +3,16 @@ class TempManager {
         this.cityData = []
     }
 
-    getDataFromDB() {
+
+    async getDataFromDB() {
         let self = this.cityData
-        $.get('/cities', function (res) {
-            this.self = res
-            return res
-        })
+        let res = await $.get('/cities')
+        if (res) {
+            for (let i=0; i<res.length; i++) {
+                self.push(res[i])
+            }
+        }
+        return
     }
 
     async getCityData(cityName) {

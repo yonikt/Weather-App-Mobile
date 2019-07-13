@@ -2,6 +2,15 @@ const renderer = new Renderer
 const tempManager = new TempManager
 
 
+async function loadPage() {
+   await tempManager.getDataFromDB()
+   for(let i=0; i<tempManager.cityData.length; i++){
+   renderer.renderData(tempManager.cityData[i])
+   }
+}
+loadPage()
+
+
 const getData = async function () {
     const input = $('input').val()
     const data = await tempManager.getCityData(input)
@@ -11,7 +20,7 @@ const getData = async function () {
 const saveData= async function(){
    let cityName = $(this).parent().find('.name').text()
    let data = await tempManager.saveCity(cityName)
-   renderer.renderData(data)
+   return data
 }
 
 const deleteData=async function(){
@@ -19,6 +28,8 @@ const deleteData=async function(){
    let data = await tempManager.removeCity(cityName)
    renderer.renderData(data)
 }
+
+
 
 $('#search').on('click', getData)
 $('body').on('click', '#save', saveData) 
