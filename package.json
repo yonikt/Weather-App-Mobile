@@ -18,9 +18,17 @@
   },
   "homepage": "https://github.com/yonikt/Weather-App#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "body-parser": "^1.17.2",
-    "mongodb": "*",
-    "request": "^2.83.0"
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33",
+    "mongoose": "^4.12.4",
+    "nodemon": "^1.12.1",
+    "path": "^0.12.7",
+    "pg": "^6.1.0",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "router": "^1.3.2"
   }
 }
