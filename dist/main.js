@@ -27,7 +27,6 @@ const deleteData=function(){
    let cityName = $(this).parent().find('.name').text()
    tempManager.removeCity(cityName)
    renderer.renderData(tempManager.cityData)
-   loadPage()
 }
 
 
