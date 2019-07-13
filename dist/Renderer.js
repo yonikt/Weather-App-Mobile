@@ -7,7 +7,7 @@ $('#container').append(`<div id="weather_wrapper">
     <div class="currentTemp">
         <span class="temp">${data.temperature}<sup>°C</sup></span>
         <span class="location"> <div class="name">${data.name}</div>
-            <span class="last">Last Updated:  ${data.updatedAt}</span> 
+            <span class="last">Last Updated:  ${data.updatedAt.slice(11,16)}</span> 
         </span>
     </div>
     <div class="currentWeather">
@@ -24,4 +24,4 @@ $('#container').append(`<div id="weather_wrapper">
      }
      
     }
- //add later - .slice(11,16)
+   
