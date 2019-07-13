@@ -19,14 +19,16 @@ const getData = async function () {
 
 const saveData= async function(){
    let cityName = $(this).parent().find('.name').text()
-   let data = await tempManager.saveCity(cityName)
-   return data
+  await tempManager.saveCity(cityName)
+  $(this).prop('disabled', true)
 }
 
-const deleteData=function(){
+const deleteData= async function(){
    let cityName = $(this).parent().find('.name').text()
-   tempManager.removeCity(cityName)
+  await tempManager.removeCity(cityName)
    renderer.renderData(tempManager.cityData)
+   $(this).prop('disabled', true)
+   location.reload()
 }
 
 
