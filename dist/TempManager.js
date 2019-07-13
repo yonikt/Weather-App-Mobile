@@ -29,15 +29,16 @@ class TempManager {
         return data
     }
 
+
     removeCity(cityName) {
         $.ajax({
-            method: 'DELETE',
+            type: "DELETE",
             url: `/city/${cityName}`,
-            success: function (data) {
-                return data
+            success: function () {
+                console.log("deleted")
             }
         })
-
+        this.cityData = this.cityData.filter(c => c.name != cityName)
     }
 
    

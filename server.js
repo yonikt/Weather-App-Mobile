@@ -42,11 +42,10 @@ app.post('/city', (req, res) => {
 
 app.delete('/city/:cityName', function(req, res){
     const city = req.params.cityName
-    City.findOneAndRemove({'name': city}).then(function(){
+    cityModel.findOneAndRemove({'name': city}).then(function(){
     })
     res.end()
 })
-
 
 
 

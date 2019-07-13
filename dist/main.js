@@ -23,11 +23,13 @@ const saveData= async function(){
    return data
 }
 
-const deleteData=async function(){
+const deleteData=function(){
    let cityName = $(this).parent().find('.name').text()
-   let data = await tempManager.removeCity(cityName)
-   renderer.renderData(data)
+   tempManager.removeCity(cityName)
+   renderer.renderData(tempManager.cityData)
+   loadPage()
 }
+
 
 
 
