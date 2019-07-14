@@ -151,7 +151,13 @@ max-height: 100%;
 	display: inline-block;
 	margin-left: 35px;
 	margin-top: 25px;
- }
+	background-image: url('https://cdn1.iconfinder.com/data/icons/color-bold-style/21/01-512.png');
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: right center;
+	background-position: 150px;
+}
+	
 
  sup{
 	 font-size: 15px;
