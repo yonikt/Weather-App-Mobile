@@ -39,5 +39,3 @@ $('body').on('click', '#save', saveData)
 $('body').on('click', '#delete', deleteData)
 
 
-
-
