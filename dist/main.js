@@ -33,7 +33,6 @@ const deleteData= async function(){
 
 
 
-
 $('#search').on('click', getData)
 $('body').on('click', '#save', saveData) 
 $('body').on('click', '#delete', deleteData)
