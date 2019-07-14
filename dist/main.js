@@ -8,7 +8,7 @@ async function loadPage() {
    renderer.renderData(tempManager.cityData[i])
    }
 }
-loadPage()
+
 
 
 const getData = async function () {
@@ -21,15 +21,17 @@ const saveData= async function(){
    let cityName = $(this).parent().find('.name').text()
   await tempManager.saveCity(cityName)
   $(this).prop('disabled', true)
+  
 }
 
 const deleteData= async function(){
    let cityName = $(this).parent().find('.name').text()
-  await tempManager.removeCity(cityName)
-   renderer.renderData(tempManager.cityData)
+  tempManager.removeCity(cityName)
+  await tempManager.getDataFromDB()
+   $(this).parent().remove()
    $(this).prop('disabled', true)
-   location.reload()
 }
+
 
 
 
@@ -37,4 +39,4 @@ $('#search').on('click', getData)
 $('body').on('click', '#save', saveData) 
 $('body').on('click', '#delete', deleteData)
 
-
+loadPage()
