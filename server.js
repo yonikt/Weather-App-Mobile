@@ -28,7 +28,7 @@ app.get('/city/:cityName', function (req, res) {
     })
 })
 
-app.get('/cities', function (req, res) {
+app.get('/city', function (req, res) {
     cityModel.find({}, function (err, data) {
         res.send(data)
     })

@@ -6,13 +6,13 @@ class TempManager {
 
     async getDataFromDB() {
         let self = this.cityData
-        let res = await $.get('/cities')
-        if (res) {
+        let res = await $.get('/city')
+        console.log(res)
+        
             for (let i=0; i<res.length; i++) {
                 self.push(res[i])
             }
-        }
-        return
+     
     }
 
     async getCityData(cityName) {
